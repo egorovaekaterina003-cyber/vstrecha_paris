@@ -7,7 +7,6 @@
 <meta name="description" content="Открытый разговор с Дашей Шамашу о любви. 6 декабря 2026, 19:00 по Парижу, Консерватория им. Рахманинова и онлайн.">
 <meta property="og:title" content="Ты хочешь любви, но её нет — встреча с Дашей Шамашу в Париже">
 <meta property="og:description" content="Открытый разговор с Дашей Шамашу о любви. 6 декабря 2026, 19:00 по Парижу, Консерватория им. Рахманинова и онлайн.">
-<meta property="og:image" content="img/banner.jpg">
 <style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
@@ -18,7 +17,7 @@
 <style>
 /* Layout: вечер при свечах — глубокий винный бархат, тонкий курсив, золотые волоски-линии, много воздуха; блоки чередуют сторону, без коробок */
 :root {
-  --night: #2a0001;
+  --night: #160001;
   --velvet: #2b040a;
   --velvet-2: #3a0610;
   --cream: #f7e9dd;
@@ -34,14 +33,14 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-body { background-color: var(--night);
+body { background-color: #160001;
   background-image:
-    radial-gradient(ellipse 70% 7% at 90% 6%, rgba(170,8,16,0.55) 0%, rgba(170,8,16,0) 100%),
-    radial-gradient(ellipse 60% 9% at 4% 26%, rgba(150,6,12,0.50) 0%, rgba(150,6,12,0) 100%),
-    radial-gradient(ellipse 65% 9% at 96% 46%, rgba(165,8,16,0.48) 0%, rgba(165,8,16,0) 100%),
-    radial-gradient(ellipse 60% 9% at 6% 66%, rgba(155,6,14,0.48) 0%, rgba(155,6,14,0) 100%),
-    radial-gradient(ellipse 70% 10% at 88% 88%, rgba(170,8,16,0.50) 0%, rgba(170,8,16,0) 100%),
-    linear-gradient(180deg, #3b0102 0%, #2a0001 18%, #3a0103 40%, #260001 60%, #360103 80%, #1e0001 100%);
+    radial-gradient(ellipse 70% 7% at 90% 6%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    radial-gradient(ellipse 60% 9% at 4% 26%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    radial-gradient(ellipse 65% 9% at 96% 46%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    radial-gradient(ellipse 60% 9% at 6% 66%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    radial-gradient(ellipse 70% 10% at 88% 88%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    linear-gradient(180deg, #220001 0%, #140000 20%, #1d0001 42%, #110000 62%, #1b0001 80%, #0d0000 100%);
   background-repeat: no-repeat; background-size: 100% 100%; color: var(--cream); font-family: var(--body); font-weight: 300; font-size: 16px; line-height: 1.7; letter-spacing: 0.01em; }
 .wrap { max-width: 1120px; margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
 h1, h2, h3 { font-family: var(--display); font-weight: 500; text-wrap: balance; margin: 0; }
@@ -133,7 +132,7 @@ main > section.band:last-child { padding-bottom: 36px; }
 .when .v i { color: var(--gold); }
 .ticket { margin-top: 16px; display: grid; grid-template-columns: 300px minmax(0, 1fr); border: 1px solid var(--gold); border-radius: 22px; background: linear-gradient(135deg, rgba(216,20,47,0.16), rgba(0,0,0,0.15)); position: relative; }
 .stub { padding: 32px 28px; display: flex; flex-direction: column; align-items: flex-start; border-right: 1px dashed var(--gold); position: relative; min-width: 0; }
-.stub::before, .stub::after { content: ""; position: absolute; right: -13px; width: 24px; height: 24px; border-radius: 50%; background: #300002; border: 1px solid var(--gold); }
+.stub::before, .stub::after { content: ""; position: absolute; right: -13px; width: 24px; height: 24px; border-radius: 50%; background: #1a0001; border: 1px solid var(--gold); }
 .stub::before { top: -13px; clip-path: inset(50% 0 0 0); }
 .stub::after { bottom: -13px; clip-path: inset(0 0 50% 0); }
 .ticket .k { font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); }
