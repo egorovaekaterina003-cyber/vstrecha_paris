@@ -392,6 +392,12 @@ footer.legal .wrap { border-top: 1px solid var(--gold-soft); padding-top: 24px; 
 .tg p i { color: var(--gold); }
 .help { color: var(--muted); font-size: 14px; margin-top: 14px; }
 .help a { color: var(--gold); }
+.slido { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 32px; align-items: center; }
+.slido-h { font-size: clamp(24px, 2.6vw, 32px); }
+.slido-text { display: flex; flex-direction: column; gap: 12px; color: var(--muted); font-size: 15.5px; min-width: 0; }
+.slido-qr { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
+.slido-qr img { width: 205px; height: 205px; border-radius: 14px; box-shadow: 0 0 0 1px var(--gold); }
+@media (max-width: 640px) { .slido { grid-template-columns: 1fr; } .slido-qr { display: none; } }
 [data-only] { display: none; }
 body.f-offline [data-only="offline"], body.f-online [data-only="online"], body.f-any [data-only="any"] { display: revert; }
 @media (max-width: 640px) {
@@ -424,6 +430,20 @@ body.f-offline [data-only="offline"], body.f-online [data-only="online"], body.f
       <div class="actions">
         <a class="btn" id="gcal" href="#" target="_blank" rel="noopener">Добавить в Google Календарь</a>
         <a class="btn" id="ics" href="#" download="vstrecha-dasha-shamashu.ics">Добавить в календарь телефона</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <span class="eyebrow">Вопрос Даше</span>
+      <div class="panel slido">
+        <div class="slido-text">
+          <h2 class="slido-h">Задай вопрос <i>анонимно</i> уже сейчас</h2>
+          <p>Напиши, что давно хочешь спросить о любви и отношениях. Можно без имени: никто не узнает, что вопрос твой. Даша посмотрит вопросы заранее и ответит на встрече. Понравившиеся вопросы других участников можно поддержать лайком.</p>
+          <div class="cta-row"><a class="btn" href="https://app.sli.do/event/hk5aqheCHYRzpbxkynufgU" target="_blank" rel="noopener">Задать вопрос <span class="arrow" aria-hidden="true"></span></a></div>
+        </div>
+        <div class="slido-qr"><img src="data:image/png;base64,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" alt="QR-код для вопросов в Slido" width="205" height="205"><span>Наведи камеру телефона</span></div>
       </div>
     </div>
   </section>
