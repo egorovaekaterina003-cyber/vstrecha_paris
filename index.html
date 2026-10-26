@@ -16,7 +16,7 @@
 <style>
 /* Layout: вечер при свечах — глубокий винный бархат, тонкий курсив, золотые волоски-линии, много воздуха; блоки чередуют сторону, без коробок */
 :root {
-  --night: #2a0001;
+  --night: #160001;
   --velvet: #2b040a;
   --velvet-2: #3a0610;
   --cream: #f7e9dd;
@@ -32,14 +32,14 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-body { background-color: var(--night);
+body { background-color: #160001;
   background-image:
-    radial-gradient(ellipse 70% 7% at 90% 6%, rgba(170,8,16,0.55) 0%, rgba(170,8,16,0) 100%),
-    radial-gradient(ellipse 60% 9% at 4% 26%, rgba(150,6,12,0.50) 0%, rgba(150,6,12,0) 100%),
-    radial-gradient(ellipse 65% 9% at 96% 46%, rgba(165,8,16,0.48) 0%, rgba(165,8,16,0) 100%),
-    radial-gradient(ellipse 60% 9% at 6% 66%, rgba(155,6,14,0.48) 0%, rgba(155,6,14,0) 100%),
-    radial-gradient(ellipse 70% 10% at 88% 88%, rgba(170,8,16,0.50) 0%, rgba(170,8,16,0) 100%),
-    linear-gradient(180deg, #3b0102 0%, #2a0001 18%, #3a0103 40%, #260001 60%, #360103 80%, #1e0001 100%);
+    radial-gradient(ellipse 70% 7% at 90% 6%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    radial-gradient(ellipse 60% 9% at 4% 26%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    radial-gradient(ellipse 65% 9% at 96% 46%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    radial-gradient(ellipse 60% 9% at 6% 66%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    radial-gradient(ellipse 70% 10% at 88% 88%, rgba(135,5,12,0.34) 0%, rgba(135,5,12,0) 100%),
+    linear-gradient(180deg, #220001 0%, #140000 20%, #1d0001 42%, #110000 62%, #1b0001 80%, #0d0000 100%);
   background-repeat: no-repeat; background-size: 100% 100%; color: var(--cream); font-family: var(--body); font-weight: 300; font-size: 16px; line-height: 1.7; letter-spacing: 0.01em; }
 .wrap { max-width: 1120px; margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
 h1, h2, h3 { font-family: var(--display); font-weight: 500; text-wrap: balance; margin: 0; }
@@ -131,7 +131,7 @@ main > section.band:last-child { padding-bottom: 36px; }
 .when .v i { color: var(--gold); }
 .ticket { margin-top: 16px; display: grid; grid-template-columns: 300px minmax(0, 1fr); border: 1px solid var(--gold); border-radius: 22px; background: linear-gradient(135deg, rgba(216,20,47,0.16), rgba(0,0,0,0.15)); position: relative; }
 .stub { padding: 32px 28px; display: flex; flex-direction: column; align-items: flex-start; border-right: 1px dashed var(--gold); position: relative; min-width: 0; }
-.stub::before, .stub::after { content: ""; position: absolute; right: -13px; width: 24px; height: 24px; border-radius: 50%; background: #300002; border: 1px solid var(--gold); }
+.stub::before, .stub::after { content: ""; position: absolute; right: -13px; width: 24px; height: 24px; border-radius: 50%; background: #1a0001; border: 1px solid var(--gold); }
 .stub::before { top: -13px; clip-path: inset(50% 0 0 0); }
 .stub::after { bottom: -13px; clip-path: inset(0 0 50% 0); }
 .ticket .k { font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); }
@@ -309,6 +309,7 @@ main > section.band:last-child { padding-bottom: 36px; }
 @media (max-width: 560px) { .cta-row .btn { width: 100%; } }
 
 /* Окно перед оплатой */
+.modal[hidden] { display: none !important; }
 .modal { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
 .modal-backdrop { position: absolute; inset: 0; background: rgba(15,0,2,0.78); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 .modal-card { position: relative; width: 100%; max-width: 480px; max-height: 100%; overflow: auto; padding: 30px 30px 24px; border-radius: 22px; border: 1px solid var(--gold); background: linear-gradient(160deg, #4a0309 0%, #2a0001 70%); box-shadow: 0 40px 90px -30px rgba(0,0,0,0.9); }
@@ -334,6 +335,24 @@ main > section.band:last-child { padding-bottom: 36px; }
 .agree a { color: var(--gold); }
 #pm-go { width: 100%; margin-top: 6px; cursor: pointer; border: 0; }
 .pm-note { font-size: 12px; color: var(--muted); text-align: center; line-height: 1.5; }
+
+/* Тема: три шага */
+.panel.trio { padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.t-col { padding: 28px 28px 22px; display: flex; flex-direction: column; gap: 12px; color: var(--muted); font-size: 15px; min-width: 0; }
+.t-col + .t-col { border-left: 1px dashed var(--gold-soft); }
+.t-k { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); }
+.t-k b { flex: none; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 0 1px var(--gold) inset; font-family: var(--display); font-weight: 500; font-size: 14px; letter-spacing: 0; }
+.t-lead { font-family: var(--display); font-style: italic; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.35; color: var(--cream); }
+.t-lead i { color: var(--gold); }
+.trio .myth { font-family: var(--display); font-size: clamp(18px, 1.7vw, 21px); line-height: 1.3; color: var(--muted); text-decoration: line-through; text-decoration-color: var(--lips); text-decoration-thickness: 2px; }
+.t-note { font-style: italic; font-size: 14px; }
+.t-wine { grid-column: 1 / -1; margin: 0 28px 28px; }
+@media (max-width: 860px) {
+  .panel.trio { grid-template-columns: 1fr; }
+  .t-col + .t-col { border-left: 0; border-top: 1px dashed var(--gold-soft); }
+  .t-col { padding: 22px 20px 18px; }
+  .t-wine { margin: 0 20px 20px; }
+}
 
 footer.legal { padding-block: 28px 36px; color: var(--muted); font-size: 13px; line-height: 1.7; }
 footer.legal .wrap { border-top: 1px solid var(--gold-soft); padding-top: 24px; display: flex; flex-direction: column; gap: 18px; }
@@ -380,23 +399,26 @@ footer.legal .wrap { border-top: 1px solid var(--gold-soft); padding-top: 24px; 
     <div class="wrap">
       <span class="eyebrow">Тема встречи</span>
       <h2 id="topic-h" style="margin-top: 8px;">Ты хочешь любви, <i>но её нет</i></h2>
-      <div class="panel" style="padding:0">
-    <div class="myths">
-      <div class="l">
-        <span class="k">Что тебе обычно говорят</span>
-        <p class="myth">«Всех достойных уже разобрали»</p>
-        <p class="myth">«Просто отпусти ситуацию»</p>
-        <p class="myth">«Сначала полюби себя»</p>
-        <p style="color: var(--muted); font-size: 15px;">А ты умная, красивая, успешная. Или вообще мужчина, у которого, казалось бы, всё прекрасно. Но то никого нет, то всё не те. То бабочки в животе, то очередное разочарование. А иногда отношения есть, но счастья в них почему-то нет.</p>
+      <div class="panel trio">
+        <div class="t-col">
+          <span class="t-k"><b>1</b>Знакомо?</span>
+          <p class="t-lead">Ты умная, красивая, успешная. Или вообще мужчина, у которого, казалось бы, всё прекрасно.</p>
+          <p>Но то никого нет, то всё не те. То бабочки в животе, то очередное разочарование. А иногда отношения есть, но счастья в них почему-то нет.</p>
+        </div>
+        <div class="t-col">
+          <span class="t-k"><b>2</b>И что тебе советуют</span>
+          <p class="myth">«Всех достойных уже разобрали»</p>
+          <p class="myth">«Просто отпусти ситуацию»</p>
+          <p class="myth">«Сначала полюби себя»</p>
+          <p class="t-note">Звучит знакомо — и не помогает.</p>
+        </div>
+        <div class="t-col">
+          <span class="t-k"><b>3</b>Что будет на встрече</span>
+          <p class="t-lead">Разговор о любви <i>без розовых очков</i> и красивых иллюзий.</p>
+          <p>Честно, с юмором и без запретных тем. Ты сможешь задать любой вопрос — лично или онлайн — и получить ответ в реальном времени.</p>
+        </div>
+        <div class="plaque t-wine"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0zM12 14v6M8 21h8"/></svg><p>За бокалом вина разберёмся, почему в твоей личной жизни всё идёт <s>через жопу</s> наперекосяк и как наконец перестать наступать на одни и те же грабли.</p></div>
       </div>
-      <div class="r">
-        <span class="k">Что будет на встрече</span>
-        <p class="big">Разговор о любви <i>без розовых очков</i> и красивых иллюзий</p>
-        <p>Честно, с юмором и без запретных тем. Ты сможешь задать любой вопрос — лично или онлайн — и получить ответ в реальном времени.</p>
-        <div class="plaque"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0zM12 14v6M8 21h8"/></svg><p>За бокалом вина разберёмся, почему в твоей личной жизни всё идёт <s>через жопу</s> наперекосяк и как наконец перестать наступать на одни и те же грабли.</p></div>
-      </div>
-    </div>
-  </div>
       <div class="cta-row"><a class="btn" href="#formats">Хочу на встречу <span class="arrow" aria-hidden="true"></span></a></div>
     </div>
   </section>
