@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ты хочешь любви, но её нет</title>
+<meta name="description" content="Открытый разговор с Дашей Шамашу о любви. 6 декабря 2026, 19:00 по Парижу, Консерватория им. Рахманинова и онлайн.">
+<meta property="og:title" content="Ты хочешь любви, но её нет — встреча с Дашей Шамашу в Париже">
+<meta property="og:description" content="Открытый разговор с Дашей Шамашу о любви. 6 декабря 2026, 19:00 по Парижу, Консерватория им. Рахманинова и онлайн.">
+<meta property="og:image" content="img/banner.jpg">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Marck+Script&family=Montserrat:wght@300;400;500&display=swap">
+<style>
+/* Layout: вечер при свечах — глубокий винный бархат, тонкий курсив, золотые волоски-линии, много воздуха; блоки чередуют сторону, без коробок */
+:root {
+  --night: #2a0001;
+  --velvet: #2b040a;
+  --velvet-2: #3a0610;
+  --cream: #f7e9dd;
+  --muted: #cdb2a6;
+  --gold: #d4ae72;
+  --gold-soft: rgba(212,174,114,0.35);
+  --lips: #d8142f;
+  --display: 'Playfair Display', 'Times New Roman', Georgia, serif;
+  --script: 'Marck Script', 'Segoe Script', cursive;
+  --body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { background-color: var(--night);
+  background-image:
+    radial-gradient(ellipse 70% 7% at 90% 6%, rgba(170,8,16,0.55) 0%, rgba(170,8,16,0) 100%),
+    radial-gradient(ellipse 60% 9% at 4% 26%, rgba(150,6,12,0.50) 0%, rgba(150,6,12,0) 100%),
+    radial-gradient(ellipse 65% 9% at 96% 46%, rgba(165,8,16,0.48) 0%, rgba(165,8,16,0) 100%),
+    radial-gradient(ellipse 60% 9% at 6% 66%, rgba(155,6,14,0.48) 0%, rgba(155,6,14,0) 100%),
+    radial-gradient(ellipse 70% 10% at 88% 88%, rgba(170,8,16,0.50) 0%, rgba(170,8,16,0) 100%),
+    linear-gradient(180deg, #3b0102 0%, #2a0001 18%, #3a0103 40%, #260001 60%, #360103 80%, #1e0001 100%);
+  background-repeat: no-repeat; background-size: 100% 100%; color: var(--cream); font-family: var(--body); font-weight: 300; font-size: 16px; line-height: 1.7; letter-spacing: 0.01em; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+::selection { background: var(--lips); color: #fff; }
+
+.eyebrow { display: inline-flex; align-items: center; gap: 16px; font-size: 11px; font-weight: 400; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); }
+.eyebrow::before { content: ""; width: 48px; height: 1px; background: var(--gold); }
+h2 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.12; letter-spacing: -0.01em; }
+h2 i { font-style: italic; color: var(--gold); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 18px;
+  padding: 20px 44px; border-radius: 999px;
+  background: linear-gradient(180deg, #a4122a 0%, #7a0a1c 55%, #5c0614 100%); color: #fbeee2; text-decoration: none;
+  font-family: var(--body); font-weight: 400; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase;
+  box-shadow: 0 0 0 1px rgba(212,174,114,0.75) inset, 0 1px 0 rgba(255,220,180,0.25) inset, 0 18px 44px -16px rgba(120,6,20,0.9);
+  transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+.btn:hover { background: linear-gradient(180deg, #b8162f 0%, #8a0c20 55%, #680718 100%); transform: translateY(-1px); box-shadow: 0 0 0 1px var(--gold) inset, 0 1px 0 rgba(255,220,180,0.3) inset, 0 22px 54px -14px rgba(140,8,24,0.95); }
+.btn.ghost { background: transparent; color: var(--cream); box-shadow: 0 0 0 1px var(--gold) inset; }
+.btn.ghost:hover { background: rgba(212,174,114,0.12); }
+.btn:focus-visible, a:focus-visible { outline: 1px solid var(--gold); outline-offset: 5px; }
+.btn .arrow { width: 28px; height: 1px; background: currentColor; position: relative; }
+.btn .arrow::after { content: ""; position: absolute; right: 0; top: -3px; width: 7px; height: 7px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
+
+/* Баннер — целиком */
+.banner { background: #3b0102; }
+.banner a { display: block; max-width: 1881px; margin: 0 auto; }
+.banner img { display: block; width: 100%; height: auto; }
+
+section.band { position: relative; padding-block: 14px; }
+main > section.band:first-child { padding-top: 28px; }
+main > section.band:last-child { padding-bottom: 36px; }
+.glow::before { content: none; }
+.glow.r::before { right: -360px; top: -200px; }
+.glow.l::before { left: -380px; bottom: -300px; }
+.band > .wrap { position: relative; }
+.velvet { background: transparent; }
+.velvet-2 { background: transparent; }
+.divider { display: flex; align-items: center; justify-content: center; gap: 18px; color: var(--gold); padding-block: 8px; }
+.divider::before, .divider::after { content: ""; width: 80px; height: 1px; background: var(--gold-soft); }
+
+/* 1. Тема */
+.topic { max-width: 760px; margin: 0; display: flex; flex-direction: column; gap: 20px; color: var(--muted); font-size: 16px; }
+.topic .eyebrow { align-self: flex-start; }
+.topic-h { font-size: clamp(28px, 3.2vw, 40px); color: var(--cream); margin-bottom: 4px; }
+.topic-lead { font-family: var(--display); font-style: italic; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.4; color: var(--cream); }
+.topic-q { font-family: var(--display); font-size: clamp(20px, 2.1vw, 25px); line-height: 1.3; color: var(--cream); padding-block: 6px; }
+.topic-q em { font-family: var(--script); font-style: normal; color: var(--lips); font-size: 1.1em; white-space: nowrap; }
+.wine { margin-top: 8px; display: flex; align-items: flex-start; gap: 16px; padding-top: 20px; border-top: 1px solid var(--gold-soft); }
+.wine svg { flex: none; margin-top: 2px; }
+.wine p { font-family: var(--display); font-style: italic; font-size: clamp(17px, 1.6vw, 19px); line-height: 1.45; color: var(--cream); }
+.wine s { text-decoration-color: var(--lips); text-decoration-thickness: 2px; color: var(--muted); }
+
+/* 2. Спикер */
+.speaker { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 64px; align-items: start; margin-top: 24px; }
+.speaker-side { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.speaker-photo { position: relative; width: 100%; max-width: 360px; margin-top: -16px; }
+.speaker-photo::before { content: ""; position: absolute; inset: 10% -12% 6% -12%; background: radial-gradient(closest-side, rgba(216,20,47,0.45), rgba(216,20,47,0)); z-index: 0; }
+.speaker-photo img { position: relative; z-index: 1; display: block; width: 100%; height: auto; -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%); mask-image: linear-gradient(to bottom, #000 72%, transparent 100%); }
+.speaker-head { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.speaker-name { font-size: clamp(32px, 3.8vw, 48px); line-height: 1.05; font-weight: 500; }
+.speaker-name i { font-style: italic; color: var(--gold); }
+.speaker-role { font-family: var(--display); font-style: italic; font-size: 17px; line-height: 1.45; color: var(--muted); border-top: 1px solid var(--gold-soft); padding-top: 18px; }
+.speaker-role b { font-weight: 500; color: var(--cream); }
+.speaker-text { display: flex; flex-direction: column; gap: 16px; color: var(--muted); font-size: 16px; min-width: 0; }
+.speaker-text .first { font-family: var(--display); font-style: italic; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.4; color: var(--cream); }
+.speaker-style { font-family: var(--display); font-size: clamp(18px, 1.8vw, 22px); line-height: 1.35; color: var(--cream); padding-block: 4px; }
+.speaker-style i { color: var(--gold); }
+.warn { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--gold-soft); color: var(--cream); font-size: 17px; line-height: 1.6; }
+.warn b { font-family: var(--script); font-weight: 400; font-size: 1.6em; color: var(--lips); margin-right: 6px; }
+
+/* 3. Для кого */
+.who { display: flex; flex-direction: column; align-items: flex-start; }
+.who-text { margin-top: 22px; max-width: 720px; display: flex; flex-direction: column; gap: 16px; color: var(--muted); }
+.who-list { font-family: var(--display); font-style: italic; font-size: clamp(18px, 1.8vw, 22px); line-height: 1.5; color: var(--cream); }
+.who-text em { font-style: italic; font-family: var(--display); color: var(--gold); white-space: nowrap; }
+.who-punch { padding-top: 16px; border-top: 1px solid var(--gold-soft); font-family: var(--display); font-size: clamp(18px, 1.8vw, 21px); line-height: 1.45; color: var(--cream); }
+
+/* 4. Когда и где */
+.when { margin-top: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.when > div { padding: 8px 40px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.when > div:first-child { padding-left: 0; }
+.when > div + div { border-left: 1px solid var(--gold-soft); }
+.when .k { font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--muted); }
+.when .v { font-family: var(--display); font-size: clamp(24px, 2.5vw, 32px); line-height: 1.05; color: var(--cream); }
+.when .v i { color: var(--gold); }
+.ticket { margin-top: 16px; display: grid; grid-template-columns: 300px minmax(0, 1fr); border: 1px solid var(--gold); border-radius: 22px; background: linear-gradient(135deg, rgba(216,20,47,0.16), rgba(0,0,0,0.15)); position: relative; }
+.stub { padding: 32px 28px; display: flex; flex-direction: column; align-items: flex-start; border-right: 1px dashed var(--gold); position: relative; min-width: 0; }
+.stub::before, .stub::after { content: ""; position: absolute; right: -13px; width: 24px; height: 24px; border-radius: 50%; background: #300002; border: 1px solid var(--gold); }
+.stub::before { top: -13px; clip-path: inset(50% 0 0 0); }
+.stub::after { bottom: -13px; clip-path: inset(0 0 50% 0); }
+.ticket .k { font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold); }
+.stub .day { font-family: var(--display); font-size: 84px; line-height: 0.95; color: var(--cream); margin-top: 6px; }
+.stub .month { font-family: var(--display); font-style: italic; font-size: 20px; color: var(--gold); }
+.times { display: flex; gap: 18px; margin-top: 4px; }
+.times > div { display: flex; flex-direction: column; }
+.times .msk { padding-left: 18px; border-left: 1px solid var(--gold-soft); }
+.times .msk .time { color: var(--gold); }
+.stub .tz { white-space: nowrap; font-family: var(--display); font-style: italic; font-size: 16px; color: var(--gold); line-height: 1.4; }
+.stub .time { font-family: var(--display); font-size: 34px; line-height: 1.1; color: var(--cream); }
+.ticket-body { display: flex; flex-direction: column; min-width: 0; }
+.t-row { padding: 28px 32px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.t-online { border-top: 1px dashed var(--gold-soft); }
+.t-row .place { font-family: var(--display); font-size: clamp(22px, 2.3vw, 28px); line-height: 1.2; color: var(--cream); }
+.t-row .place i { color: var(--gold); }
+.t-row .sub { color: var(--muted); font-size: 15px; }
+.hl { color: var(--gold); font-weight: 500; }
+@media (max-width: 640px) {
+  .ticket { grid-template-columns: 1fr; }
+  .stub { border-right: 0; border-bottom: 1px dashed var(--gold); flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 24px; }
+  .stub .k { width: 100%; }
+  .stub .k[style] { margin-top: 6px !important; }
+  .stub .day { font-size: 56px; }
+  .stub .tz { width: auto; }
+  .stub::before, .stub::after { display: none; }
+  .t-row { padding: 22px 24px; }
+}
+.when-lead { margin-top: 12px; font-family: var(--display); font-style: italic; font-size: clamp(18px, 1.8vw, 21px); color: var(--cream); }
+.when .sub { color: var(--muted); font-size: 15px; }
+.route { margin-top: 8px; display: inline-flex; align-items: center; gap: 14px; width: fit-content; color: var(--gold); text-decoration: none; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; border-bottom: 1px solid var(--gold-soft); padding-bottom: 6px; }
+.route:hover { color: var(--cream); border-color: var(--gold); }
+.route .arrow { width: 24px; height: 1px; background: currentColor; position: relative; }
+.route .arrow::after { content: ""; position: absolute; right: 0; top: -3px; width: 7px; height: 7px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
+
+/* 5. Почему */
+.reasons { margin-top: 28px; display: flex; flex-direction: column; border-bottom: 1px solid var(--gold-soft); }
+.reason { position: relative; display: grid; grid-template-columns: 32px minmax(0, 0.9fr) minmax(0, 1.3fr); column-gap: 24px; align-items: start; padding-block: 16px; border-top: 1px solid var(--gold-soft); transition: background .35s ease; }
+.reason:hover { background: linear-gradient(90deg, rgba(216,20,47,0.14), rgba(216,20,47,0) 70%); }
+.reason .mark { color: var(--lips); padding-top: 3px; }
+.reason .mark svg { width: 20px; height: 18px; }
+.reason h3 { font-size: clamp(18px, 1.7vw, 21px); line-height: 1.2; font-style: italic; color: var(--cream); }
+.reason p { color: var(--muted); padding-top: 2px; font-size: 15px; }
+@media (max-width: 760px) {
+  .reason { grid-template-columns: 32px minmax(0, 1fr); row-gap: 8px; column-gap: 14px; padding-block: 20px; }
+  .reason p { grid-column: 2; padding-top: 0; }
+}
+.quote { margin: 24px 0 0; max-width: 940px; font-family: var(--display); font-size: clamp(18px, 1.9vw, 23px); line-height: 1.25; }
+.quote .from { text-decoration: line-through; text-decoration-color: var(--lips); text-decoration-thickness: 2px; color: var(--muted); white-space: nowrap; }
+.quote .to { font-style: italic; color: var(--gold); white-space: nowrap; }
+
+/* 6. Форматы */
+.plans { margin-top: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+.plan { position: relative; padding: 30px 30px 28px; border-radius: 22px; display: flex; flex-direction: column; gap: 18px; min-width: 0; background: linear-gradient(160deg, rgba(216,20,47,0.16) 0%, rgba(62,2,4,0.55) 55%, rgba(30,0,2,0.55) 100%); border: 1px solid var(--gold); }
+.plan.main { background: linear-gradient(160deg, rgba(216,20,47,0.30) 0%, rgba(62,2,4,0.55) 55%, rgba(30,0,2,0.6) 100%); border-color: var(--gold); box-shadow: 0 30px 70px -40px rgba(216,20,47,0.7); }
+.plan-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+.plan .tag { display: block; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.plan h3 { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.1; font-weight: 500; }
+.plan h3 i { color: var(--gold); }
+.plan .limit { flex: none; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #fff; background: var(--lips); padding: 7px 12px; border-radius: 999px; }
+.plan .price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 6px; padding-block: 14px; border-top: 1px solid var(--gold-soft); border-bottom: 1px solid var(--gold-soft); }
+.plan .price .num { font-family: var(--display); font-size: 54px; line-height: 1; color: var(--cream); font-variant-numeric: tabular-nums; }
+.plan .price .cur { font-family: var(--display); font-size: 30px; color: var(--gold); }
+.plan .price .or { font-family: var(--display); font-style: italic; font-size: 20px; color: var(--muted); margin: 0 8px; }
+.plan .price .alt { flex-basis: 100%; font-size: 13px; color: var(--muted); letter-spacing: 0.02em; }
+.plan ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; color: var(--muted); font-size: 15px; }
+.plan li { display: flex; gap: 12px; align-items: flex-start; }
+.plan li::before { content: ""; flex: none; width: 6px; height: 6px; margin-top: 9px; transform: rotate(45deg); border: 1px solid var(--gold); }
+.plan li.wine-inc { color: var(--cream); padding: 10px 14px; border-radius: 12px; background: rgba(212,174,114,0.12); align-items: center; }
+.plan li.wine-inc::before { content: none; }
+.plan li.wine-inc svg { flex: none; color: var(--gold); }
+.plan li b { font-weight: 500; color: var(--cream); }
+.plan li b.hl { color: var(--gold); }
+.plan .pay { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+.plan .pay .btn { width: 100%; }
+.paybtn { justify-content: flex-start; gap: 14px; padding: 12px 22px 12px 12px; text-align: left; letter-spacing: 0; text-transform: none; }
+.paybtn .cur-badge { flex: none; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(212,174,114,0.16); color: var(--gold); box-shadow: 0 0 0 1px rgba(212,174,114,0.6) inset; font-family: var(--display); font-size: 20px; font-weight: 500; }
+.paybtn .pb-text { display: flex; flex-direction: column; flex: 1; min-width: 0; line-height: 1.3; }
+.paybtn .pb-main { font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; }
+.paybtn .pb-sub { font-size: 13px; opacity: 0.85; letter-spacing: 0.02em; }
+.plan .pay-note { text-align: center; font-size: 12px; color: var(--muted); letter-spacing: 0.06em; margin-bottom: 8px; }
+.plan .pay-note:last-child { margin-bottom: 0; }
+
+
+/* Панели — общий стиль, как у билета и форматов */
+.panel { margin-top: 16px; position: relative; border: 1px solid var(--gold-soft); border-radius: 22px; background: linear-gradient(160deg, rgba(216,20,47,0.18) 0%, rgba(62,2,4,0.55) 55%, rgba(30,0,2,0.55) 100%); box-shadow: 0 30px 70px -45px rgba(216,20,47,0.6); padding: 32px 36px; min-width: 0; }
+.panel.split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 0; padding: 0; }
+.panel.split .col { padding: 32px 36px; display: flex; flex-direction: column; gap: 16px; color: var(--muted); min-width: 0; }
+.panel.split .side { border-left: 1px dashed var(--gold-soft); justify-content: center; }
+.panel .lead { font-family: var(--display); font-style: italic; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.45; color: var(--cream); }
+.big-q { font-family: var(--display); font-size: clamp(21px, 2.2vw, 27px); line-height: 1.3; color: var(--cream); }
+.big-q em { font-family: var(--script); font-style: normal; color: var(--lips); font-size: 1.15em; white-space: nowrap; }
+.big-q i { color: var(--gold); white-space: nowrap; }
+.plaque { display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border-radius: 14px; background: rgba(212,174,114,0.12); color: var(--cream); }
+.plaque svg { flex: none; color: var(--gold); }
+.plaque p { font-family: var(--display); font-style: italic; font-size: 17px; line-height: 1.45; }
+.plaque s { text-decoration-color: var(--lips); text-decoration-thickness: 2px; color: var(--muted); }
+.plaque.love .ico svg { color: var(--lips); margin-top: 3px; }
+.panel.speaker { margin-top: 16px; }
+.speaker-warn { grid-column: 1 / -1; border-top: 1px dashed var(--gold-soft); padding-top: 18px; }
+.speaker-warn .warn { margin: 0; padding: 0; border: 0; }
+.panel.why { padding: 8px 36px 28px; }
+.panel.why .reasons { margin-top: 0; border-bottom: 0; }
+.panel.why .reason:first-child { border-top: 0; }
+.quote-plaque { margin-top: 12px; }
+.quote-plaque .quote { margin: 0; font-style: normal; }
+@media (max-width: 760px) {
+  .panel { padding: 24px 20px; }
+  .panel.split { grid-template-columns: 1fr; padding: 0; }
+  .panel.split .col { padding: 24px 20px; }
+  .panel.split .side { border-left: 0; border-top: 1px dashed var(--gold-soft); }
+  .panel.why { padding: 4px 18px 20px; }
+}
+
+/* Чат */
+.panel.chat { padding: 0; overflow: hidden; }
+.chat-top { display: flex; align-items: center; gap: 12px; padding: 14px 22px; border-bottom: 1px solid var(--gold-soft); background: rgba(0,0,0,0.18); }
+.chat-top img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--gold); }
+.chat-top b { display: block; font-family: var(--display); font-weight: 500; font-size: 17px; color: var(--cream); line-height: 1.2; }
+.chat-top span { font-size: 12px; color: var(--gold); letter-spacing: 0.04em; }
+.msgs { display: flex; flex-direction: column; gap: 10px; padding: 24px 22px 26px; }
+.msg { max-width: min(560px, 82%); padding: 12px 16px; border-radius: 18px; font-size: 15.5px; line-height: 1.5; }
+.msg.me { align-self: flex-end; background: rgba(247,233,221,0.10); color: var(--cream); border-bottom-right-radius: 6px; }
+.msg.her { align-self: flex-start; background: linear-gradient(160deg, rgba(216,20,47,0.55), rgba(140,10,32,0.55)); color: #fff; border-bottom-left-radius: 6px; }
+.msg.me + .msg.her { margin-top: 14px; }
+.msg.big { font-family: var(--display); font-size: clamp(19px, 2vw, 23px); line-height: 1.3; }
+.msg.big em { font-family: var(--script); font-style: normal; font-size: 1.15em; color: #ffd9a8; white-space: nowrap; }
+.wine-msg { display: flex; gap: 12px; align-items: flex-start; }
+.wine-msg svg { flex: none; color: #ffd9a8; margin-top: 2px; }
+.wine-msg p { font-family: var(--display); font-style: italic; }
+.wine-msg s { text-decoration-color: #ffd9a8; text-decoration-thickness: 2px; opacity: 0.75; }
+/* Чек-лист */
+.chks { margin-top: 18px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.chk { position: relative; display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--gold-soft); cursor: pointer; color: var(--cream); font-size: 15px; line-height: 1.4; transition: background .25s ease, border-color .25s ease; min-width: 0; }
+.chk:hover { border-color: var(--gold); }
+.chk input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chk .box { flex: none; width: 20px; height: 20px; margin-top: 1px; border-radius: 6px; border: 1px solid var(--gold); position: relative; transition: background .2s ease; }
+.chk .box::after { content: ""; position: absolute; left: 6px; top: 2px; width: 6px; height: 11px; border-right: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(45deg); opacity: 0; }
+.chk input:checked + .box { background: var(--lips); border-color: var(--lips); }
+.chk input:checked + .box::after { opacity: 1; }
+.chk:has(input:checked) { background: rgba(216,20,47,0.18); border-color: var(--lips); }
+.chk input:focus-visible + .box { outline: 1px solid var(--gold); outline-offset: 3px; }
+.checklist .plaque { margin-top: 18px; }
+#who-result { color: var(--gold); font-style: normal; }
+@media (max-width: 900px) { .chks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .chks { grid-template-columns: 1fr; } .msg { max-width: 92%; } .msgs { padding: 18px 14px 20px; } }
+
+/* Журнальная тема */
+.panel.mag { padding: 40px 44px 32px; }
+.mag-q { text-align: center; font-family: var(--script); color: var(--lips); font-size: clamp(38px, 5vw, 64px); line-height: 1.1; max-width: 900px; margin: 0 auto; text-wrap: balance; text-shadow: 0 6px 30px rgba(216,20,47,0.35); }
+.mag-cols { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--gold-soft); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 44px; row-gap: 22px; color: var(--muted); font-size: 15px; }
+.mag-cols > div { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.mag-cols > div + div { border-left: 1px solid var(--gold-soft); padding-left: 44px; }
+.mag-cols .lead { font-size: clamp(17px, 1.6vw, 19px); }
+.mag-wine { margin-top: 26px; justify-content: center; align-items: center; text-align: left; }
+@media (max-width: 760px) {
+  .panel.mag { padding: 28px 20px 22px; }
+  .mag-cols { grid-template-columns: 1fr; }
+  .mag-cols > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--gold-soft); padding-top: 20px; }
+}
+
+/* V2 мифы */
+.myths { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 0; }
+.myths .l { padding: 30px 32px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.myths .r { padding: 30px 32px; border-left: 1px dashed var(--gold-soft); display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.myth { font-family: var(--display); font-size: clamp(20px,2.1vw,25px); color: var(--muted); text-decoration: line-through; text-decoration-color: var(--lips); text-decoration-thickness: 2px; }
+.myths .k { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); }
+.myths .r .big { font-family: var(--display); font-size: clamp(22px,2.4vw,30px); line-height: 1.25; }
+.myths .r .big i { color: var(--gold); }
+.myths .r p { color: var(--muted); font-size: 15px; }
+@media (max-width: 760px) { .myths { grid-template-columns: 1fr; } .myths .r { border-left: 0; border-top: 1px dashed var(--gold-soft); } }
+
+.cta-row { margin-top: 16px; display: flex; }
+.cta-row .btn { width: 100%; }
+@media (max-width: 560px) { .cta-row .btn { width: 100%; } }
+
+/* Окно перед оплатой */
+.modal { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(15,0,2,0.78); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.modal-card { position: relative; width: 100%; max-width: 480px; max-height: 100%; overflow: auto; padding: 30px 30px 24px; border-radius: 22px; border: 1px solid var(--gold); background: linear-gradient(160deg, #4a0309 0%, #2a0001 70%); box-shadow: 0 40px 90px -30px rgba(0,0,0,0.9); }
+.modal-x { position: absolute; top: 12px; right: 14px; width: 40px; height: 40px; border: 0; background: transparent; color: var(--gold); font-size: 28px; line-height: 1; cursor: pointer; }
+.modal-card h3 { margin-top: 10px; font-size: 26px; line-height: 1.2; }
+.modal-card h3 i { color: var(--gold); }
+.pm-choice { margin-top: 8px; color: var(--gold); font-size: 14px; letter-spacing: 0.04em; }
+#pm-form { margin-top: 18px; display: flex; flex-direction: column; gap: 12px; }
+.fld { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+.fld small { font-size: 12px; opacity: 0.8; }
+.fld input { font: inherit; font-size: 16px; letter-spacing: 0; color: var(--cream); background: rgba(0,0,0,0.25); border: 1px solid var(--gold-soft); border-radius: 12px; padding: 12px 14px; outline: none; }
+.fld input:focus { border-color: var(--gold); }
+.fld input::placeholder { color: rgba(205,178,166,0.55); }
+.err { display: none; font-style: normal; font-size: 12px; color: #ff8a95; }
+.err.on { display: block; }
+.agree { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--muted); line-height: 1.5; cursor: pointer; }
+.agree input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.agree .box { flex: none; width: 18px; height: 18px; margin-top: 2px; border-radius: 5px; border: 1px solid var(--gold); position: relative; }
+.agree .box::after { content: ""; position: absolute; left: 5px; top: 1px; width: 5px; height: 10px; border-right: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(45deg); opacity: 0; }
+.agree input:checked + .box { background: #7a0a1c; }
+.agree input:checked + .box::after { opacity: 1; }
+.agree input:focus-visible + .box { outline: 1px solid var(--gold); outline-offset: 3px; }
+.agree a { color: var(--gold); }
+#pm-go { width: 100%; margin-top: 6px; cursor: pointer; border: 0; }
+.pm-note { font-size: 12px; color: var(--muted); text-align: center; line-height: 1.5; }
+
+footer.legal { padding-block: 28px 36px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+footer.legal .wrap { border-top: 1px solid var(--gold-soft); padding-top: 24px; display: flex; flex-direction: column; gap: 18px; }
+.legal-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; letter-spacing: 0.12em; }
+.legal-top i { font-family: var(--display); font-size: 16px; letter-spacing: 0; color: var(--cream); }
+.legal-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 40px; }
+.legal .links { display: flex; flex-direction: column; gap: 4px; }
+.legal a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-soft); }
+.legal a:hover { color: var(--cream); }
+.legal .copy { font-size: 12px; opacity: 0.8; }
+.mobile-cta { display: none; }
+
+@media (max-width: 900px) {
+  section.band { padding-block: 12px; }
+  .topic-grid, .plans { grid-template-columns: 1fr; }
+  .topic-grid { gap: 28px; margin-top: 40px; }
+  .speaker { grid-template-columns: minmax(0, 1fr) 260px; gap: 32px; }
+  .quote { margin-top: 36px; }
+  .when { grid-template-columns: 1fr; }
+  .when > div { padding: 24px 0; }
+  .when > div + div { border-left: 0; border-top: 1px solid var(--gold-soft); }
+  .plan { padding: 26px 22px; }
+  .mobile-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+    background: rgba(28,2,6,0.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-top: 1px solid var(--gold-soft); }
+  .mobile-cta .btn { width: 100%; padding: 17px 20px; }
+}
+@media (max-width: 600px) {
+  .speaker { grid-template-columns: 1fr; }
+  .speaker-side { position: static; order: -1; }
+  .speaker-photo { max-width: 280px; }
+}
+@media (max-width: 420px) { .btn { letter-spacing: 0.22em; padding: 18px 26px; } }
+</style>
+
+<header class="banner">
+  <a href="#formats" aria-label="Хочу на встречу — перейти к форматам участия"><img src="img/banner.jpg" alt="Встреча в Париже с Дашей Шамашу. Ты хочешь любви, но её нет. Хочу на встречу" width="1881" height="836"></a>
+</header>
+<h1 class="sr">Ты хочешь любви, но её нет — встреча с Дашей Шамашу в Париже</h1>
+
+<main>
+  <!-- 1. Тема встречи -->
+  <section class="band" aria-labelledby="topic-h">
+    <div class="wrap">
+      <span class="eyebrow">Тема встречи</span>
+      <h2 id="topic-h" style="margin-top: 8px;">Ты хочешь любви, <i>но её нет</i></h2>
+      <div class="panel" style="padding:0">
+    <div class="myths">
+      <div class="l">
+        <span class="k">Что тебе обычно говорят</span>
+        <p class="myth">«Всех достойных уже разобрали»</p>
+        <p class="myth">«Просто отпусти ситуацию»</p>
+        <p class="myth">«Сначала полюби себя»</p>
+        <p style="color: var(--muted); font-size: 15px;">А ты умная, красивая, успешная. Или вообще мужчина, у которого, казалось бы, всё прекрасно. Но то никого нет, то всё не те. То бабочки в животе, то очередное разочарование. А иногда отношения есть, но счастья в них почему-то нет.</p>
+      </div>
+      <div class="r">
+        <span class="k">Что будет на встрече</span>
+        <p class="big">Разговор о любви <i>без розовых очков</i> и красивых иллюзий</p>
+        <p>Честно, с юмором и без запретных тем. Ты сможешь задать любой вопрос — лично или онлайн — и получить ответ в реальном времени.</p>
+        <div class="plaque"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0zM12 14v6M8 21h8"/></svg><p>За бокалом вина разберёмся, почему в твоей личной жизни всё идёт <s>через жопу</s> наперекосяк и как наконец перестать наступать на одни и те же грабли.</p></div>
+      </div>
+    </div>
+  </div>
+      <div class="cta-row"><a class="btn" href="#formats">Хочу на встречу <span class="arrow" aria-hidden="true"></span></a></div>
+    </div>
+  </section>
+
+  <!-- 2. Автор встречи -->
+  <section class="band" aria-labelledby="speaker-h">
+    <div class="wrap">
+      <span class="eyebrow">Автор встречи</span>
+      <div class="panel speaker">
+        <div class="speaker-text">
+          <p class="first">Даша говорит о любви так, как многие думают, но не решаются произнести вслух.</p>
+          <p>Без сладких иллюзий, заезженных советов и попыток убедить тебя, что для счастья достаточно просто «полюбить себя».</p>
+          <p>Она умеет превращать запутанные истории отношений в понятные ответы, сложные темы — в увлекательный разговор, а неудобную правду — в повод наконец посмотреть на свою жизнь иначе.</p>
+          <p class="speaker-style">Её стиль — <i>честность, остроумие, провокация</i> и никакой психологической ванили.</p>
+          <p>На этой встрече не будет правильных и неправильных вопросов. Будет живой разговор о том, что действительно волнует, с ответами, которые могут удивить, рассмешить и заставить задуматься.</p>
+        </div>
+        <div class="speaker-side">
+          <div class="speaker-photo"><img src="img/dasha-cut.webp" alt="Даша Шамашу" width="640" height="767"></div>
+          <h2 id="speaker-h" class="speaker-name">Даша <i>Шамашу</i></h2>
+          <p class="speaker-role">Психологический просветитель, писательница, инфлюэнсер и автор бестселлера <b>«Любовь не чувство»</b>.</p>
+        </div>
+        <div class="speaker-warn"><p class="warn"><b>Осторожно:</b> после этой встречи твои любимые оправдания в отношениях могут перестать работать. 😉</p></div>
+      </div>
+      <div class="cta-row"><a class="btn" href="#formats">Хочу на встречу <span class="arrow" aria-hidden="true"></span></a></div>
+    </div>
+  </section>
+
+  <!-- 3. Для кого -->
+  <section class="band" aria-labelledby="who-h">
+    <div class="wrap">
+      <span class="eyebrow">Для кого</span>
+      <h2 id="who-h" style="margin-top: 8px;">Узнаёшь <i>себя?</i></h2>
+      <div class="panel checklist">
+        <p class="lead">Мужчина или женщина — неважно. Отметь, что про тебя:</p>
+        <div class="chks">
+          <label class="chk" for="who0"><input type="checkbox" id="who0"><span class="box" aria-hidden="true"></span><span>В паре, но что-то давно не так</span></label>
+          <label class="chk" for="who1"><input type="checkbox" id="who1"><span class="box" aria-hidden="true"></span><span>Без пары</span></label>
+          <label class="chk" for="who2"><input type="checkbox" id="who2"><span class="box" aria-hidden="true"></span><span>В вечном поиске</span></label>
+          <label class="chk" for="who3"><input type="checkbox" id="who3"><span class="box" aria-hidden="true"></span><span>Уже зарёкся искать</span></label>
+          <label class="chk" for="who4"><input type="checkbox" id="who4"><span class="box" aria-hidden="true"></span><span>После болезненного расставания</span></label>
+          <label class="chk" for="who5"><input type="checkbox" id="who5"><span class="box" aria-hidden="true"></span><span>Десять лет отношений, в которых давно что-то не так</span></label>
+          <label class="chk" for="who6"><input type="checkbox" id="who6"><span class="box" aria-hidden="true"></span><span>Вечно «все не те»</span></label>
+          <label class="chk" for="who7"><input type="checkbox" id="who7"><span class="box" aria-hidden="true"></span><span>Всё время «не время»</span></label>
+          <label class="chk" for="who8"><input type="checkbox" id="who8"><span class="box" aria-hidden="true"></span><span>Снова знакомые грабли</span></label>
+        </div>
+        <div class="plaque love"><span class="ico"><svg aria-hidden="true" width="22" height="20" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M12 20.5S2 14.4 2 7.6A5 5 0 0 1 12 5a5 5 0 0 1 10 2.6c0 6.8-10 12.9-10 12.9z"/></svg></span><p><span id="who-result">Хотя бы одна галочка — тебе точно сюда.</span> Если твоя личная жизнь больше напоминает сериал с сомнительным сценарием, чем историю любви, — эта встреча для тебя.</p></div>
+      </div>
+      <div class="cta-row"><a class="btn" href="#formats">Хочу на встречу <span class="arrow" aria-hidden="true"></span></a></div>
+    </div>
+  </section>
+
+  <!-- 4. Когда и где -->
+  <section class="band velvet" aria-labelledby="when-h">
+    <div class="wrap">
+      <span class="eyebrow">Когда и где</span>
+      <h2 id="when-h" style="margin-top: 8px;">Встречаемся <i>в Париже</i> ❤️</h2>
+      <p class="when-lead">Париж — город любви. Самое время выяснить, куда делась твоя.</p>
+      <div class="ticket">
+        <div class="stub">
+          <span class="k">Дата</span>
+          <span class="day">6</span>
+          <span class="month">декабря 2026</span>
+          <span class="k" style="margin-top: 8px;">Начало</span>
+          <div class="times">
+            <div><span class="time">19:00</span><span class="tz">по Парижу</span></div>
+            <div class="msk"><span class="time">21:00</span><span class="tz">по Москве</span></div>
+          </div>
+        </div>
+        <div class="ticket-body">
+          <div class="t-row">
+            <span class="k">В зале · Париж</span>
+            <span class="place">Консерватория <i>им. Рахманинова</i></span>
+            <span class="sub">26 Avenue de New York, 75116 Paris</span>
+            <a class="route" href="https://www.google.com/maps/search/?api=1&amp;query=26+Avenue+de+New+York+75116+Paris" target="_blank" rel="noopener">Построить маршрут <span class="arrow" aria-hidden="true"></span></a>
+          </div>
+          <div class="t-row t-online">
+            <span class="k">Или онлайн</span>
+            <span class="place">Из любой <i>точки мира</i></span>
+            <span class="sub">Прямая трансляция: 19:00 по Парижу, <b class="hl">21:00 по Москве</b>. Вопросы можно задавать онлайн.</span>
+          </div>
+        </div>
+      </div>
+      <div class="cta-row"><a class="btn" href="#formats">Хочу на встречу <span class="arrow" aria-hidden="true"></span></a></div>
+    </div>
+  </section>
+
+  <!-- 5. Почему стоит прийти -->
+  <section class="band velvet-2 glow l" aria-labelledby="why-h">
+    <div class="wrap">
+      <span class="eyebrow">Почему стоит прийти</span>
+      <h2 id="why-h" style="margin-top: 8px;">«А зачем <i>мне это?</i>»</h2>
+      <div class="panel why">
+        <div class="reasons">
+        <div class="reason">
+          <span class="mark" aria-hidden="true"><svg width="26" height="24" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 20.5S2 14.4 2 7.6A5 5 0 0 1 12 5a5 5 0 0 1 10 2.6c0 6.8-10 12.9-10 12.9z"/></svg></span>
+          <h3>«Я и так всё про себя знаю»</h3>
+          <p>Возможно. Но иногда проблема совсем не там, где ты привыкла её искать.</p>
+        </div>
+        <div class="reason">
+          <span class="mark" aria-hidden="true"><svg width="26" height="24" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 20.5S2 14.4 2 7.6A5 5 0 0 1 12 5a5 5 0 0 1 10 2.6c0 6.8-10 12.9-10 12.9z"/></svg></span>
+          <h3>«Мне хватает советов подруг»</h3>
+          <p>Подруги жалеют. Даша отвечает честно, даже если ответ неудобный.</p>
+        </div>
+        <div class="reason">
+          <span class="mark" aria-hidden="true"><svg width="26" height="24" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 20.5S2 14.4 2 7.6A5 5 0 0 1 12 5a5 5 0 0 1 10 2.6c0 6.8-10 12.9-10 12.9z"/></svg></span>
+          <h3>«Не люблю лекции»</h3>
+          <p>Лекций не будет. Будет живой разговор, где можно задать свой вопрос и получить ответ в реальном времени.</p>
+        </div>
+        <div class="reason">
+          <span class="mark" aria-hidden="true"><svg width="26" height="24" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 20.5S2 14.4 2 7.6A5 5 0 0 1 12 5a5 5 0 0 1 10 2.6c0 6.8-10 12.9-10 12.9z"/></svg></span>
+          <h3>«Это не про меня»</h3>
+          <p>Если в личной жизни всё идёт наперекосяк, это точно про тебя.</p>
+        </div>
+      </div>
+        <div class="plaque quote-plaque"><p class="quote">Пространство, где <span class="from">«всё сложно»</span> становится <span class="to">«понятно и легко»</span>.</p></div>
+      </div>
+      <div class="cta-row"><a class="btn" href="#formats">Хочу на встречу <span class="arrow" aria-hidden="true"></span></a></div>
+    </div>
+  </section>
+
+  <!-- 6. Форматы участия -->
+  <section class="band glow r" id="formats" aria-labelledby="formats-h">
+    <div class="wrap">
+      <span class="eyebrow">Форматы участия</span>
+      <h2 id="formats-h" style="margin-top: 8px;">Выбери, как <i>ты будешь с нами</i></h2>
+      <div class="plans">
+        <article class="plan main">
+          <div class="plan-head">
+            <div>
+              <span class="tag">Офлайн · Париж</span>
+              <h3>Место <i>в зале</i></h3>
+            </div>
+            <span class="limit">Места ограничены</span>
+          </div>
+          <div class="price"><span class="num">75</span><span class="cur">€</span><span class="or">или</span><span class="num">7 000</span><span class="cur">₽</span></div>
+          <ul>
+            <li>Встреча с Дашей вживую в Консерватории им. Рахманинова</li>
+            <li>Вопрос из зала с ответом в реальном времени</li>
+            <li class="wine-inc"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0zM12 14v6M8 21h8"/></svg><span><b>Бокал вина включён в стоимость</b></span></li>
+          </ul>
+          <div class="pay">
+            <a class="btn paybtn" href="https://app.leadpay.ru/checkout/68905/" data-format="offline" data-price="7 000 ₽" data-method="LeadPay"><span class="cur-badge" aria-hidden="true">₽</span><span class="pb-text"><span class="pb-main">Забрать место · 7 000 ₽</span><span class="pb-sub">Карта российского банка</span></span><span class="arrow" aria-hidden="true"></span></a>
+            <a class="btn paybtn" href="https://buy.stripe.com/cNi7sLcG3eAR9S7gD68Rb0M" data-format="offline" data-price="75 €" data-method="Stripe"><span class="cur-badge" aria-hidden="true">€</span><span class="pb-text"><span class="pb-main">Забрать место · 75 €</span><span class="pb-sub">Visa / Mastercard других стран</span></span><span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
+        <article class="plan">
+          <div class="plan-head">
+            <div>
+              <span class="tag">Онлайн · из любой точки мира</span>
+              <h3>Прямая <i>трансляция</i></h3>
+            </div>
+          </div>
+          <div class="price"><span class="num">50</span><span class="cur">€</span><span class="or">или</span><span class="num">4 500</span><span class="cur">₽</span></div>
+          <ul>
+            <li><span>Трансляция встречи: 19:00 по Парижу, <b class="hl">21:00 по Москве</b></span></li>
+            <li>Вопрос онлайн с ответом в реальном времени</li>
+          </ul>
+          <div class="pay">
+            <a class="btn paybtn" href="https://app.leadpay.ru/checkout/68906/" data-format="online" data-price="4 500 ₽" data-method="LeadPay"><span class="cur-badge" aria-hidden="true">₽</span><span class="pb-text"><span class="pb-main">Забрать место · 4 500 ₽</span><span class="pb-sub">Карта российского банка</span></span><span class="arrow" aria-hidden="true"></span></a>
+            <a class="btn paybtn" href="https://buy.stripe.com/28EfZhfSfgIZ9S7cmQ8Rb0N" data-format="online" data-price="50 €" data-method="Stripe"><span class="cur-badge" aria-hidden="true">€</span><span class="pb-text"><span class="pb-main">Забрать место · 50 €</span><span class="pb-sub">Visa / Mastercard других стран</span></span><span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<div class="modal" id="pay-modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="pm-title">
+    <button class="modal-x" type="button" aria-label="Закрыть" data-close>×</button>
+    <span class="eyebrow">Последний шаг</span>
+    <h3 id="pm-title">Куда прислать <i>координаты встречи?</i></h3>
+    <p class="pm-choice" id="pm-choice"></p>
+    <form id="pm-form" novalidate>
+      <label class="fld" for="pm-name"><span>Имя</span><input id="pm-name" type="text" autocomplete="given-name" placeholder="Как к тебе обращаться"><em class="err" id="pm-e-name">Напиши имя</em></label>
+      <label class="fld" for="pm-mail"><span>Email</span><input id="pm-mail" type="email" autocomplete="email" placeholder="твой@email.com"><em class="err" id="pm-e-mail">Проверь email — на него придут координаты встречи</em></label>
+      <label class="fld" for="pm-tg"><span>Telegram <small>— по желанию</small></span><input id="pm-tg" type="text" placeholder="@username"></label>
+      <label class="agree" for="pm-agree"><input id="pm-agree" type="checkbox"><span class="box" aria-hidden="true"></span><span>Соглашаюсь с <a href="ССЫЛКА_ОФЕРТА" target="_blank" rel="noopener">офертой</a> и даю <a href="ССЫЛКА_ПЕРСДАННЫЕ" target="_blank" rel="noopener">согласие на обработку персональных данных</a></span></label>
+      <em class="err" id="pm-e-agree">Нужно согласие, чтобы продолжить</em>
+      <button class="btn" type="submit" id="pm-go">Перейти к оплате <span class="arrow" aria-hidden="true"></span></button>
+      <p class="pm-note">За 3 дня до встречи на этот email придут координаты, а потом напоминания за 24 часа, 3 часа и 30 минут.</p>
+    </form>
+  </div>
+</div>
+
+<footer class="legal">
+  <div class="wrap">
+    <div class="legal-top"><i>«Ты хочешь любви, но её нет» · Даша Шамашу</i><span>ПАРИЖ · 6 ДЕКАБРЯ 2026 · 19:00 ПО ПАРИЖУ / 21:00 ПО МОСКВЕ</span></div>
+    <div class="legal-grid">
+      <div class="req">
+        <div>ИП Лабковская Д.&thinsp;М.</div>
+        <div>ИНН 770701322553</div>
+        <div>ОГРНИП 326508100426529</div>
+      </div>
+      <div class="links">
+        <a href="ССЫЛКА_ОФЕРТА">Договор публичной оферты</a>
+        <a href="ССЫЛКА_ПЕРСДАННЫЕ">Согласие на обработку персональных данных</a>
+        <a href="ССЫЛКА_ПОЛИТИКА">Политика конфиденциальности</a>
+        <span>Отдел поддержки: <a href="mailto:dashashamashu@gmail.com">dashashamashu@gmail.com</a></span>
+      </div>
+    </div>
+    <div class="copy">© 2026 Даша Шамашу</div>
+  </div>
+</footer>
+
+
+
+<script>
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll('.chks input'));
+  var out=document.getElementById('who-result');
+  function upd(){
+    var n=boxes.filter(function(b){return b.checked}).length;
+    out.textContent = n===0 ? 'Хотя бы одна галочка — тебе точно сюда.' : (n===1 ? 'Одна галочка — уже повод прийти.' : 'Галочек: '+n+'. Тебе точно сюда.');
+  }
+  boxes.forEach(function(b){b.addEventListener('change',upd)});
+})();
+</script>
+
+<script>
+/* Адрес веб-приложения Google Apps Script (новая таблица встречи).
+   Пока пусто — форма работает и ведёт на оплату, но в таблицу не пишет. */
+var WEBHOOK = "https://script.google.com/macros/s/AKfycbwg8JlqeoHKgQkwKEQa7DQAGbYyUKrQNiUyNKEBBAW_OqDhlagjMi7rCoedVJXXbTUn/exec";
+
+(function(){
+  var modal = document.getElementById('pay-modal');
+  var choice = null;
+  function utm(){
+    var p = new URLSearchParams(location.search), o = {};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){ if(p.get(k)) o[k]=p.get(k); });
+    return o;
+  }
+  function open(btn){
+    choice = { url: btn.getAttribute('href'), format: btn.dataset.format, price: btn.dataset.price, method: btn.dataset.method };
+    document.getElementById('pm-choice').textContent = (choice.format==='offline' ? 'Офлайн, место в зале' : 'Онлайн-трансляция') + ' · ' + choice.price + ' · ' + (choice.method==='Stripe' ? 'Visa / Mastercard других стран' : 'карта российского банка');
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ document.getElementById('pm-name').focus(); }, 50);
+  }
+  function close(){ modal.hidden = true; document.body.style.overflow = ''; }
+  document.querySelectorAll('.paybtn').forEach(function(b){
+    b.addEventListener('click', function(e){ e.preventDefault(); open(b); });
+  });
+  modal.querySelectorAll('[data-close]').forEach(function(el){ el.addEventListener('click', close); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !modal.hidden) close(); });
+
+  document.getElementById('pm-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('pm-name').value.trim();
+    var mail = document.getElementById('pm-mail').value.trim();
+    var tg = document.getElementById('pm-tg').value.trim();
+    var agree = document.getElementById('pm-agree').checked;
+    var ok = true;
+    function flag(id, bad){ document.getElementById(id).classList.toggle('on', bad); if(bad) ok=false; }
+    flag('pm-e-name', name.length < 2);
+    flag('pm-e-mail', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail));
+    flag('pm-e-agree', !agree);
+    if(!ok || !choice) return;
+
+    var id = 'P' + Date.now().toString(36).toUpperCase() + Math.random().toString(36).slice(2,6).toUpperCase();
+    var lead = { id: id, ts: new Date().toISOString(), name: name, email: mail, telegram: tg,
+      format: choice.format === 'offline' ? 'Офлайн' : 'Онлайн', price: choice.price, method: choice.method, utm: utm() };
+    try { localStorage.setItem('vstrecha_lead', JSON.stringify(lead)); } catch(err) {}
+
+    if (WEBHOOK) {
+      try {
+        var body = JSON.stringify({ action: 'lead', data: lead });
+        if (navigator.sendBeacon) navigator.sendBeacon(WEBHOOK, new Blob([body], { type: 'text/plain;charset=utf-8' }));
+        else fetch(WEBHOOK, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: body });
+      } catch(err) {}
+    }
+
+    var url = choice.url;
+    if (choice.method === 'Stripe') {
+      url += (url.indexOf('?') < 0 ? '?' : '&') + 'prefilled_email=' + encodeURIComponent(mail) + '&client_reference_id=' + encodeURIComponent(id);
+    }
+    setTimeout(function(){ window.location.href = url; }, 250);
+  });
+})();
+</script>
+
+</body>
+</html>
